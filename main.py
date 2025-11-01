@@ -1,6 +1,7 @@
 ### LIB ###
 import pygame
 import pygame.camera
+import pygame_widgets
 
 ### FUNCTION ###
 from cam import img
@@ -20,7 +21,7 @@ while True:
             raise SystemExit
 
     ### Logic Updates ###
-    
+    display.fill("white")
 
     ### Graphics Render ###
     pygame.display.flip()
