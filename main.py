@@ -1,10 +1,17 @@
+### LIB ###
 import pygame
+import pygame.camera
 
+### FUNCTION ###
+from cam import img
+
+### INIT ###
 pygame.init()
-
-screen = pygame.display.set_mode((1280, 720))
-
+pygame.camera.init()
+display = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
+cam = pygame.camera.Camera(pygame.camera.list_cameras()[0], (640, 480))
+cam.start()
 
 while True:
     for event in pygame.event.get():
@@ -13,10 +20,8 @@ while True:
             raise SystemExit
 
     ### Logic Updates ###
-
-    screen.fill("white")
+    
 
     ### Graphics Render ###
-
     pygame.display.flip()
-    clock.tick(60)         
+    clock.tick(60)
