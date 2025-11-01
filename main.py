@@ -2,7 +2,7 @@ import pygame
 
 pygame.init()
 
-screen = pygame.display.set_mode((1280, 720)).convert()
+screen = pygame.display.set_mode((1280, 720))
 
 clock = pygame.time.Clock()
 
@@ -14,7 +14,7 @@ while True:
 
     ### Logic Updates ###
 
-    screen.fill("purple")
+    screen.fill("white")
 
     ### Graphics Render ###
 
