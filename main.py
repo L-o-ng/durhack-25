@@ -13,8 +13,6 @@ pygame.init()
 pygame.camera.init()
 display = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
-cam = pygame.camera.Camera(pygame.camera.list_cameras()[0], (64, 64))
-cam.start()
 
 manager = StageManager()
 manager.set_stage(Stage1(manager, display))
